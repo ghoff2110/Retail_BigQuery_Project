@@ -3,7 +3,7 @@ import pandas as pd
 import os
 
 # Authentification
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Retail project/retail_keys.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Retail project/Crediantials/retail_keys.json"
 client = bigquery.Client()
 
 # Nom du dataset

@@ -3,11 +3,11 @@ import pandas as pd
 import os
 
 # Authentification
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Retail project/Crediantials/retail_keys.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Retail project/Crediantials/retail_keys.json" # Your key path 
 client = bigquery.Client()
 
 # Nom du dataset
-dataset_id = "new_retail"  # à modifier si nécessaire
+dataset_id = "new_retail"  # your dataset name
 project_id = client.project
 
 def load_csv_to_bq(csv_path, table_name):
@@ -17,7 +17,7 @@ def load_csv_to_bq(csv_path, table_name):
     job.result()
     print(f"✅ Table {table_name} chargée ({len(df)} lignes)")
 
-# Charger les fichiers
+# upload the files
 load_csv_to_bq("C:/Retail project/data/dataproducts.csv", "products")
 load_csv_to_bq("C:/Retail project/data/datacustomers.csv", "customers")
 load_csv_to_bq("C:/Retail project/data/datasales.csv", "sales")

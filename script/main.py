@@ -7,7 +7,7 @@ fake = Faker()
 
 # Constants
 NUM_RECORDS = 500
-PRODUCT_CATEGORIES = ['Électronique', 'Vêtements', 'Maison', 'Beauté', 'Sport']
+PRODUCT_CATEGORIES = ['Électronique', 'Vêtements', 'Maison', 'Beauté', 'Sport'] 
 SALES_CHANNELS = ['Retail', 'E-commerce']
 REGIONS = ['Tunis', 'Sfax', 'Sousse', 'Gabès', 'Bizerte']
 
@@ -56,7 +56,7 @@ for _ in range(NUM_RECORDS):
 sales_df = pd.DataFrame(sales)
 
 # Save to CSV
-data_path = "C:/Retail project/data"
+data_path = "C:/Retail project/data/"
 products_df.to_csv(data_path + "products.csv", index=False)
 customers_df.to_csv(data_path + "customers.csv", index=False)
 sales_df.to_csv(data_path + "sales.csv", index=False)
